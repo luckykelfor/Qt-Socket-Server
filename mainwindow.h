@@ -17,8 +17,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     QTcpServer *server;
-    QTcpSocket *clientConnection;
+    std::list<QTcpSocket*> clientConnectionList;
+    QTcpSocket *clientCurrentConnection;
     void acceptConnection();
+
 
 
     QLabel resultLabel;
