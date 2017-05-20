@@ -59,11 +59,10 @@ void MainWindow::readClient()
 
         QString str = socket->readAll();
 
+
+        std::cout<<str.toStdString()<<QString::compare(str,QString("STARTRECORD"))<<std::endl;
         int desc =  ((int)(socket->socketDescriptor()));
-//        switch(clientCurrentConnection)
         qDebug("Received Something from: %d",desc);
-       // char buf[1024];
-        //clientConnection->read(buf,1024);
         ui->resultLabel->setText(str);
 
 

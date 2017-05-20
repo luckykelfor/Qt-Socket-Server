@@ -5,6 +5,7 @@
 #include<QtNetwork/QtNetwork>
 #include<QPushButton>
 #include<QLabel>
+#include<iostream>
 namespace Ui {
 class MainWindow;
 }
